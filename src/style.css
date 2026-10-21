@@ -119,6 +119,10 @@ small { font-size: 12px; }
 .scope-expiry__fields .time-select { flex: 0 0 72px; width: 72px; min-width: 72px; }
 .scope-expiry__fields .time-select .app-select__trigger { gap: 3px; padding-inline: 8px; }
 .scope-expiry__fields > span { color: var(--muted); font-size: 13px; }
+.scope-mode-hint { margin-block-start: 16px; }
+.scope-rule__legend { padding-inline: 8px; }
+.scope-rule__legend-label { display: inline-flex; align-items: center; gap: 8px; padding: 4px 6px 4px 12px; border: 1px solid #bddcf3; border-radius: 8px; background: #e5f1fc; color: #1766a7; font-size: 12px; font-weight: 700; line-height: 20px; }
+.scope-rule__number { display: inline-grid; place-items: center; min-width: 20px; height: 20px; padding-inline: 4px; border-radius: 5px; background: #2378bb; color: #fff; font: 700 11px var(--mono); }
 .rule-head { display: flex; justify-content: space-between; align-items: center; font-size: 13px; margin-bottom: 9px; }
 .chip-checks { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 16px; max-height: 145px; overflow: auto; }
 .staff-list > input { width: 100%; margin-bottom: 7px; }

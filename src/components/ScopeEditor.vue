@@ -98,12 +98,12 @@ async function preview() {
         </div>
       </div>
     </div>
-    <p v-if="draft.mode === 'GLOBAL'" class="alert alert-info alert-soft text-sm">全局范围只解除资源限制，不会增加权限代码。</p>
-    <p v-if="draft.mode === 'DENY'" class="alert alert-info alert-soft text-sm">拒绝模式会使这个角色已有的权限无法用于受保护操作。</p>
+    <p v-if="draft.mode === 'GLOBAL'" class="alert alert-info alert-soft text-sm scope-mode-hint">全局范围只解除资源限制，不会增加权限代码。</p>
+    <p v-if="draft.mode === 'DENY'" class="alert alert-info alert-soft text-sm scope-mode-hint">拒绝模式会使这个角色已有的权限无法用于受保护操作。</p>
     <template v-if="draft.mode === 'RESTRICTED'">
-      <p class="alert alert-info alert-soft text-sm">同一条规则的所有资源条件必须同时匹配；不同规则之间任选其一。未指定资源的列表和导出需要全局范围。</p>
+      <p class="alert alert-info alert-soft text-sm scope-mode-hint">同一条规则的所有资源条件必须同时匹配；不同规则之间任选其一。未指定资源的列表和导出需要全局范围。</p>
       <fieldset v-for="(rule, index) in draft.rules" :key="index" class="fieldset my-4 rounded-box border border-base-300 bg-base-200 p-4" :disabled="!canEdit">
-        <legend class="fieldset-legend px-2 text-primary">规则 {{ index + 1 }}</legend>
+        <legend class="scope-rule__legend"><span class="scope-rule__legend-label">规则 <span class="scope-rule__number">{{ index + 1 }}</span></span></legend>
         <div class="rule-head"><strong>此规则包含的权限</strong><button class="btn btn-link btn-sm h-auto px-0 text-error" type="button" @click="draft.rules.splice(index, 1)">移除规则</button></div>
         <div class="chip-checks">
           <label v-for="code in availableCodes" :key="code" class="badge badge-outline h-auto cursor-pointer gap-2 py-1 font-mono text-xs"><input class="checkbox checkbox-primary checkbox-xs" type="checkbox" :checked="rule.permissionCodes.includes(code)" @change="toggleCode(rule, code, ($event.target as HTMLInputElement).checked)" />{{ code }}</label>
