@@ -310,7 +310,7 @@ onBeforeUnmount(() => {
 .app-select__trigger { display: flex; width: 100%; min-height: 36px; height: 36px; justify-content: space-between; white-space: normal; font-size: 14px; border-bottom: 2px solid transparent; }
 .app-select__trigger:focus-visible { outline: none; border-bottom-color: var(--color-primary); }
 .app-select__menu { position: absolute; top: calc(100% + 6px); left: 0; right: 0; z-index: 60; min-width: 100%; max-height: min(320px, 70vh); overflow-y: auto; overscroll-behavior: contain; }
-.app-select__menu .app-select__option { font-size: 14px; min-height: 36px; }
+.app-select__menu .app-select__option { font-size: 14px; min-height: 36px; align-content: center; }
 .app-select--drop-up .app-select__menu { top: auto; bottom: calc(100% + 6px); }
 .app-select__option--selected { background: color-mix(in srgb, var(--color-primary) 14%, var(--color-base-100)); color: var(--color-base-content); font-weight: 650; }
 .app-select__option--highlighted, .app-select__option:hover { background: color-mix(in srgb, var(--color-primary) 22%, var(--color-base-100)); }
