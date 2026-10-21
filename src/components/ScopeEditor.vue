@@ -111,7 +111,7 @@ async function preview() {
         <div class="scope-grid">
           <label v-for="dimension in DIMENSIONS" :key="dimension">{{ DIMENSION_LABELS[dimension] }} ID（逗号分隔）<input class="input input-ghost" :value="ids(rule, dimension)" :placeholder="dimension === 'site' ? '例如 site-a' : '留空表示此维度不限制'" @change="setIds(rule, dimension, $event)" /></label>
           <label>单次金额上限（可选）<input class="input input-ghost" v-model="rule.maxAmount" inputmode="decimal" placeholder="例如 5000" /></label>
-          <label>币种（设置金额时必填）<input class="input input-ghost" v-model="rule.currency" maxlength="3" placeholder="例如 KES" /></label>
+          <label>币种（设置金额时必填）<input class="input input-ghost" v-model="rule.currency" maxlength="3" placeholder="例如 EUR" /></label>
         </div>
       </fieldset>
       <button class="btn btn-ghost border border-base-300" type="button" :disabled="!canEdit || draft.rules.length >= 10" @click="draft.rules.push(emptyRule())">添加资源规则</button>

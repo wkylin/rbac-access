@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 332" role="img" aria-labelledby="title desc">
+  <title id="title">菜单可见但请求被拒绝的例子</title>
+  <desc id="desc">经理角色有系统健康查看权限，因此可显示菜单；无筛选列表需要全局资源范围，经理只有受限范围，因此请求返回 403。</desc>
+  <rect width="1200" height="332" rx="22" fill="#f4f8fc"/>
+  <text x="36" y="44" fill="#176e9e" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="700" letter-spacing="2">SAME USER, TWO QUESTIONS</text>
+  <text x="36" y="83" fill="#163450" font-family="ui-sans-serif, system-ui, sans-serif" font-size="27" font-weight="700">经理能点进菜单，为何请求仍被拒绝？</text>
+
+  <rect x="36" y="113" width="490" height="165" rx="16" fill="#fff" stroke="#cde2f1"/>
+  <rect x="55" y="132" width="92" height="28" rx="7" fill="#dff4f5"/>
+  <text x="101" y="151" text-anchor="middle" fill="#147d90" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="700">菜单判断</text>
+  <text x="55" y="199" fill="#147d74" font-family="ui-sans-serif, system-ui, sans-serif" font-size="25" font-weight="700">可显示</text>
+  <text x="55" y="239" fill="#506b86" font-family="ui-sans-serif, system-ui, sans-serif" font-size="17">有效权限包含 OPS_HEALTH_VIEW</text>
+
+  <path d="M550 196h92" fill="none" stroke="#73b5d9" stroke-width="3"/>
+  <path d="m631 185 13 11-13 11" fill="none" stroke="#73b5d9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="596" y="176" text-anchor="middle" fill="#58718a" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14">发起请求</text>
+
+  <rect x="666" y="113" width="498" height="165" rx="16" fill="#fff" stroke="#e9d4d7"/>
+  <rect x="685" y="132" width="92" height="28" rx="7" fill="#fff0ef"/>
+  <text x="731" y="151" text-anchor="middle" fill="#ad4a53" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="700">接口判断</text>
+  <text x="685" y="199" fill="#bd4b56" font-family="ui-sans-serif, system-ui, sans-serif" font-size="25" font-weight="700">拒绝 403</text>
+  <text x="685" y="239" fill="#506b86" font-family="ui-sans-serif, system-ui, sans-serif" font-size="17">无筛选列表需要 GLOBAL，经理只有 RESTRICTED</text>
+
+  <text x="36" y="313" fill="#58718a" font-family="ui-sans-serif, system-ui, sans-serif" font-size="16">菜单告诉你“有这项能力”；请求还要问“对这个资源能不能用”。</text>
+</svg>

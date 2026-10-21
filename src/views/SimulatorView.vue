@@ -64,7 +64,7 @@ function updateCode(value: string | string[]) { if (typeof value === "string") c
                 <input class="input input-ghost" v-model="query[dimension]" :placeholder="dimension === 'site' ? 'site-a' : '留空'" />
               </label>
               <label>金额（可选）<input class="input input-ghost" v-model="query.amount" inputmode="decimal" placeholder="例如 100" /></label>
-              <label>币种（可选）<input class="input input-ghost" v-model="query.currency" placeholder="KES" maxlength="3" /></label>
+              <label>币种（可选）<input class="input input-ghost" v-model="query.currency" placeholder="EUR" maxlength="3" /></label>
             </div>
           </fieldset>
         </div>
