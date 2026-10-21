@@ -13,6 +13,10 @@ pnpm dev
 
 然后打开 `http://127.0.0.1:5180/`。可使用 `pnpm build` 构建静态文件，`pnpm preview` 预览构建结果。
 
+## GitHub Pages 部署
+
+仓库的 `main` 分支每次推送都会通过 GitHub Actions 构建并发布 `dist/`。首次部署需在仓库的 **Settings → Pages → Build and deployment** 中将 **Source** 设为 **GitHub Actions**。工作流成功后，访问 <https://wkylin.github.io/rbac-access/>。
+
 ## 界面主题
 
 界面使用 Tailwind CSS 4 和 daisyUI 5，默认启用 daisyUI 内置的 `corporate` 浅色主题。`src/theme.css` 配置主题与字体，`src/style.css` 只保留布局和少量业务样式。按钮、表单、状态标签与卡片使用 daisyUI 组件类；通用排版使用 Tailwind 工具类。
